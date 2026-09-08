@@ -659,10 +659,10 @@ export default function Navbar() {
                     <div className="mt-3 grid grid-cols-2 gap-2">
 
                       <Link
-                        to="/dashboard"
+                        to="/profile"
                         className="flex items-center justify-center gap-2 rounded-lg border border-white/10 px-4 py-3 text-sm font-medium text-gray-300 transition hover:bg-white/5 hover:text-white"
                       >
-                        Dashboard
+                        Profile
                       </Link>
 
 
