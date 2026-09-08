@@ -118,12 +118,15 @@ export default function Navbar() {
     "NextGenDevloper";
 
 
-  const siteLogo = siteSettings?.logo
-  ? siteSettings.logo.startsWith("http")
-    ? siteSettings.logo
-    : `http://127.0.0.1:8000${siteSettings.logo}`
-  : null;
+  const API_SERVER_URL =
+  import.meta.env.VITE_API_BASE_URL?.replace(/\/api\/?$/, "") ||
+  "http://127.0.0.1:8000";
 
+  const siteLogo = siteSettings?.logo
+    ? siteSettings.logo.startsWith("http")
+      ? siteSettings.logo
+      : `${API_SERVER_URL}${siteSettings.logo}`
+    : null;
 
   /*
    * Close mobile menu whenever
